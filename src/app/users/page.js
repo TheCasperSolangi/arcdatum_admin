@@ -11,7 +11,7 @@ export default function DashboardPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-semibold text-white mb-1">Welcome back, John</h1>
-          <p className="text-sm text-zinc-400">Here's what's happening with your projects today.</p>
+          <p className="text-sm text-zinc-400">Here&apos;s what&apos;s happening with your projects today.</p>
         </div>
         <Button className="bg-white text-black hover:bg-zinc-200">
           <Plus className="w-4 h-4 mr-2" />
@@ -55,7 +55,7 @@ export default function DashboardPage() {
         <Card className="lg:col-span-4 bg-zinc-900 border-zinc-800">
           <CardHeader>
             <CardTitle className="text-white">Recent Activity</CardTitle>
-            <CardDescription>Your team's latest updates and changes.</CardDescription>
+            <CardDescription>Your team&apos;s latest updates and changes.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             {[

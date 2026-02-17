@@ -349,7 +349,7 @@ const loadPayPalScript = () => {
             {activeTab === 'overview' && (
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold mb-4 text-white">What you'll learn</h2>
+                  <h2 className="text-2xl font-bold mb-4 text-white">What you&apos;ll learn</h2>
                   <div className="bg-[#1a1a1a] rounded-lg p-6 border border-gray-800">
                     <div className="grid sm:grid-cols-2 gap-4">
                       {lessons.slice(0, 8).map((lesson, idx) => (

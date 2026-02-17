@@ -11,7 +11,8 @@ import {
   Star,
   Users,
   Eye,
-  Book
+  Book,
+  BookOpen
 } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
