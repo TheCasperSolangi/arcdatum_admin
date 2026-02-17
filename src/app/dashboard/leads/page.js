@@ -45,7 +45,7 @@ const LeadManagement = () => {
         return;
       }
 
-      const response = await fetch('https://api.arcdatum.com/api/leads', {
+      const response = await fetch('https://api.arcdatumcode.info/api/leads', {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -123,7 +123,7 @@ const LeadManagement = () => {
       closeStatusModal();
       const authToken = Cookies.get('token');
 
-      const response = await fetch(`https://api.arcdatum.com/api/leads/${leadId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/leads/${leadId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${authToken}`,

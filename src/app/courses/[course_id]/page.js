@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, Star, PlayCircle, FileText, ChevronDown, ChevronUp, User, Calendar, Award, Users, Globe, CheckCircle, Loader2, AlertCircle, Download, Infinity, Smartphone, Trophy, X } from 'lucide-react';
 
-const API_BASE = "https://api.arcdatum.com/api";
+const API_BASE = "https://api.arcdatumcode.info/api";
 const COURSE_ID = "6933b0349fd3ecd574d64cbb";
 
 const getAuthToken = () => {

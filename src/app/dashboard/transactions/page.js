@@ -46,7 +46,7 @@ const TransactionsManagement = () => {
         ...(filters.status && { status: filters.status })
       });
 
-      const response = await fetch(`https://api.arcdatum.com/api/transactions?${params}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/transactions?${params}`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -118,7 +118,7 @@ const TransactionsManagement = () => {
 
       while (hasMore) {
         params.set('page', currentExportPage.toString());
-        const response = await fetch(`https://api.arcdatum.com/api/transactions?${params}`, {
+        const response = await fetch(`https://api.arcdatumcode.info/api/transactions?${params}`, {
           headers: {
             'Authorization': `Bearer ${authToken}`,
             'Content-Type': 'application/json'

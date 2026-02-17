@@ -42,7 +42,7 @@ export default function Sidebar() {
         // Get token from cookies
         const token = Cookies.get('token');
 
-        const response = await fetch('https://api.arcdatum.com/api/users/me', {
+        const response = await fetch('https://api.arcdatumcode.info/api/users/me', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export default function Sidebar() {
     try {
       const token = Cookies.get('token');
       
-      const response = await fetch('https://api.arcdatum.com/api/auth/logout', {
+      const response = await fetch('https://api.arcdatumcode.info/api/auth/logout', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

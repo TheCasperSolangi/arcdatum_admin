@@ -41,7 +41,7 @@ const StudentManagement = () => {
         return;
       }
 
-      const response = await fetch('https://api.arcdatum.com/api/users/students', {
+      const response = await fetch('https://api.arcdatumcode.info/api/users/students', {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ const StudentManagement = () => {
       setDeletingId(studentId);
       const authToken = Cookies.get('authToken');
 
-      const response = await fetch(`https://api.arcdatum.com/api/users/delete/${studentId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/users/delete/${studentId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${authToken}`,

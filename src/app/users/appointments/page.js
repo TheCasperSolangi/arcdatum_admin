@@ -145,7 +145,7 @@ export default function MyAppointmentsPage() {
         throw new Error("No authentication token found");
       }
 
-      const userResponse = await fetch("https://api.arcdatum.com/api/users/me", {
+      const userResponse = await fetch("https://api.arcdatumcode.info/api/users/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -158,7 +158,7 @@ export default function MyAppointmentsPage() {
       setBookingEmail(userData.email);
 
       const appointmentsResponse = await fetch(
-        `https://api.arcdatum.com/api/sessions/email/${encodeURIComponent(userData.email)}`,
+        `https://api.arcdatumcode.info/api/sessions/email/${encodeURIComponent(userData.email)}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -208,7 +208,7 @@ export default function MyAppointmentsPage() {
       setBookingSuccess(false);
 
       const token = getToken();
-      const response = await fetch(`https://api.arcdatum.com/api/slots/available?date=${date}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/slots/available?date=${date}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -239,7 +239,7 @@ export default function MyAppointmentsPage() {
       }
 
       const token = getToken();
-      const response = await fetch("https://api.arcdatum.com/api/sessions", {
+      const response = await fetch("https://api.arcdatumcode.info/api/sessions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

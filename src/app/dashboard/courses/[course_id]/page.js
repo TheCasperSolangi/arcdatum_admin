@@ -49,7 +49,7 @@ const CourseContentManagement = () => {
   const fetchCourse = async () => {
     try {
       const authToken = Cookies.get('token');
-      const response = await fetch(`https://api.arcdatum.com/api/courses/${courseId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/courses/${courseId}`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ const CourseContentManagement = () => {
     try {
       setLoading(true);
       const authToken = Cookies.get('token');
-      const response = await fetch(`https://api.arcdatum.com/api/lessons?course_id=${courseId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/lessons?course_id=${courseId}`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ const CourseContentManagement = () => {
   const handleAddLesson = async () => {
     try {
       const authToken = Cookies.get('token');
-      const response = await fetch('https://api.arcdatum.com/api/lessons/create', {
+      const response = await fetch('https://api.arcdatumcode.info/api/lessons/create', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -115,7 +115,7 @@ const CourseContentManagement = () => {
   const handleEditLesson = async () => {
     try {
       const authToken = Cookies.get('token');
-      const response = await fetch(`https://api.arcdatum.com/api/lessons/${editLessonModal.lesson._id}/edit`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/lessons/${editLessonModal.lesson._id}/edit`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -136,7 +136,7 @@ const CourseContentManagement = () => {
   const handleAddVideo = async () => {
     try {
       const authToken = Cookies.get('token');
-      const response = await fetch(`https://api.arcdatum.com/api/lessons/${addVideoModal.lesson._id}/add-video`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/lessons/${addVideoModal.lesson._id}/add-video`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -161,7 +161,7 @@ const CourseContentManagement = () => {
   const handleAddAttachment = async () => {
     try {
       const authToken = Cookies.get('token');
-      const response = await fetch(`https://api.arcdatum.com/api/lessons/${addAttachmentModal.lesson._id}/add-attachment`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/lessons/${addAttachmentModal.lesson._id}/add-attachment`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -189,7 +189,7 @@ const CourseContentManagement = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://files.arcdatum.com/api/uploads', {
+      const response = await fetch('https://files.arcdatumcode.info/api/uploads', {
         method: 'POST',
         body: formData
       });
@@ -214,7 +214,7 @@ const CourseContentManagement = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://files.arcdatum.com/api/uploads', {
+      const response = await fetch('https://files.arcdatumcode.info/api/uploads', {
         method: 'POST',
         body: formData
       });
@@ -233,7 +233,7 @@ const CourseContentManagement = () => {
   const handleDeleteVideo = async (lessonId, videoCode) => {
     try {
       const authToken = Cookies.get('token');
-      const response = await fetch(`https://api.arcdatum.com/api/lessons/${lessonId}/delete-video/${videoCode}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/lessons/${lessonId}/delete-video/${videoCode}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${authToken}`,

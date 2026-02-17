@@ -62,7 +62,7 @@ const CoursesManagement = () => {
         return;
       }
 
-      const response = await fetch('https://api.arcdatum.com/api/courses', {
+      const response = await fetch('https://api.arcdatumcode.info/api/courses', {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ const CoursesManagement = () => {
   const fetchCategories = async () => {
     try {
       const authToken = Cookies.get('token');
-      const response = await fetch('https://api.arcdatum.com/api/categories', {
+      const response = await fetch('https://api.arcdatumcode.info/api/categories', {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -167,7 +167,7 @@ const CoursesManagement = () => {
     try {
       const authToken = Cookies.get('token');
       
-      const response = await fetch('https://api.arcdatum.com/api/courses/create', {
+      const response = await fetch('https://api.arcdatumcode.info/api/courses/create', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -196,7 +196,7 @@ const CoursesManagement = () => {
       
       if (!courseId) return;
 
-      const response = await fetch(`https://api.arcdatum.com/api/courses/update/${courseId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/courses/update/${courseId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -230,7 +230,7 @@ const CoursesManagement = () => {
       setDeletingId(courseId);
       const authToken = Cookies.get('token');
 
-      const response = await fetch(`https://api.arcdatum.com/api/courses/delete/${courseId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/courses/delete/${courseId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${authToken}`,

@@ -45,10 +45,10 @@ export default function BrowseCourses() {
       }
 
       const [userResponse, coursesResponse] = await Promise.all([
-        fetch("https://api.arcdatum.com/api/users/me", {
+        fetch("https://api.arcdatumcode.info/api/users/me", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch("https://api.arcdatum.com/api/courses", {
+        fetch("https://api.arcdatumcode.info/api/courses", {
           headers: { Authorization: `Bearer ${token}` },
         })
       ]);
@@ -80,7 +80,7 @@ export default function BrowseCourses() {
 
         try {
           const progressResponse = await fetch(
-            `https://api.arcdatum.com/api/progress/courses/${course.courses_code}/progress`,
+            `https://api.arcdatumcode.info/api/progress/courses/${course.courses_code}/progress`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
 
@@ -127,7 +127,7 @@ export default function BrowseCourses() {
     if (!token) return;
 
     try {
-      const response = await fetch(`https://api.arcdatum.com/api/courses/${courseId}/enroll`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/courses/${courseId}/enroll`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,

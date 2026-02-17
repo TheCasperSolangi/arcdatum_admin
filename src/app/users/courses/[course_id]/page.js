@@ -63,7 +63,7 @@ export default function CourseLearningPage() {
       }
 
       // Fetch course details
-      const coursesResponse = await fetch("https://api.arcdatum.com/api/courses", {
+      const coursesResponse = await fetch("https://api.arcdatumcode.info/api/courses", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -76,7 +76,7 @@ export default function CourseLearningPage() {
 
       // Fetch lessons
       const lessonsResponse = await fetch(
-        `https://api.arcdatum.com/api/lessons?course_id=${courseId}`,
+        `https://api.arcdatumcode.info/api/lessons?course_id=${courseId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -88,7 +88,7 @@ export default function CourseLearningPage() {
 
       // Fetch progress
       const progressResponse = await fetch(
-        `https://api.arcdatum.com/api/progress/courses/${foundCourse.courses_code}/progress`,
+        `https://api.arcdatumcode.info/api/progress/courses/${foundCourse.courses_code}/progress`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -152,7 +152,7 @@ export default function CourseLearningPage() {
       const token = getToken();
 
       const response = await fetch(
-        `https://api.arcdatum.com/api/progress/courses/${course.courses_code}/add-progress`,
+        `https://api.arcdatumcode.info/api/progress/courses/${course.courses_code}/add-progress`,
         {
           method: "POST",
           headers: {

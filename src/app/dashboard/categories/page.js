@@ -73,7 +73,7 @@ const CategoriesManagement = () => {
         return;
       }
 
-      const response = await fetch('https://api.arcdatum.com/api/categories', {
+      const response = await fetch('https://api.arcdatumcode.info/api/categories', {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -149,7 +149,7 @@ const CategoriesManagement = () => {
     try {
       const authToken = Cookies.get('token');
       
-      const response = await fetch('https://api.arcdatum.com/api/categories', {
+      const response = await fetch('https://api.arcdatumcode.info/api/categories', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -178,7 +178,7 @@ const CategoriesManagement = () => {
       
       if (!categoryId) return;
 
-      const response = await fetch(`https://api.arcdatum.com/api/categories/${categoryId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/categories/${categoryId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -217,7 +217,7 @@ const CategoriesManagement = () => {
       setDeletingId(categoryId);
       const authToken = Cookies.get('token');
 
-      const response = await fetch(`https://api.arcdatum.com/api/categories/${categoryId}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/categories/${categoryId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${authToken}`,

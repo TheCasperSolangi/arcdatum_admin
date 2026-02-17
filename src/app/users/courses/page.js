@@ -56,10 +56,10 @@ export default function CoursesPage() {
       }
 
       const [userResponse, coursesResponse] = await Promise.all([
-        fetch("https://api.arcdatum.com/api/users/me", {
+        fetch("https://api.arcdatumcode.info/api/users/me", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch("https://api.arcdatum.com/api/courses", {
+        fetch("https://api.arcdatumcode.info/api/courses", {
           headers: { Authorization: `Bearer ${token}` },
         })
       ]);
@@ -86,7 +86,7 @@ export default function CoursesPage() {
 
         try {
           const progressResponse = await fetch(
-            `https://api.arcdatum.com/api/progress/courses/${enrolled.course_code}/progress`,
+            `https://api.arcdatumcode.info/api/progress/courses/${enrolled.course_code}/progress`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
 

@@ -45,7 +45,7 @@ const SessionsManagement = () => {
         return;
       }
 
-      const response = await fetch('https://api.arcdatum.com/api/sessions', {
+      const response = await fetch('https://api.arcdatumcode.info/api/sessions', {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const SessionsManagement = () => {
         dateParam = `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`;
       }
       
-      const response = await fetch(`https://api.arcdatum.com/api/slots/available?date=${encodeURIComponent(dateParam)}`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/slots/available?date=${encodeURIComponent(dateParam)}`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -139,7 +139,7 @@ const SessionsManagement = () => {
       const authToken = Cookies.get('token');
       const sessionCode = rescheduleModal.session?.session_code;
 
-      const response = await fetch(`https://api.arcdatum.com/api/sessions/${sessionCode}/reschedule`, {
+      const response = await fetch(`https://api.arcdatumcode.info/api/sessions/${sessionCode}/reschedule`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
