@@ -20,7 +20,7 @@ const BannerDashboard = () => {
   const token = Cookies.get('token'); // replace 'auth_token' with your cookie name
   const AUTH_TOKEN = token ? `Bearer ${token}` : null;
 
-  const baseUrl = https://api.arcdatumcode.info/api;
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // API Functions
   const fetchBanners = async () => {
